@@ -6,10 +6,9 @@
 
 - supervised learning is based on right answers that was given
 
-  ​
 
-  ##### unsupervised learning
+##### unsupervised learning
 
-  ![](images\2.jpg)
+![](images\2.jpg)
 
-  - data that doesn't have any labels or that of all has the same label
+- data that doesn't have any labels or that of all has the same label
