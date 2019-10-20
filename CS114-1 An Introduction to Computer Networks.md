@@ -1,12 +1,12 @@
----
-typora-root-url: C:\Users\chenhao\Desktop\blog\ch0317.github.io
----
+//typora-root-url: ./
 
-### CS114-1 An Introduction to Computer Networks![3-1](/images/cs114/3-1.png)
+# CS114-1 An Introduction to Computer Networks
 
 
 
-## The 4 Layer Internet Model
+![3-1](images/cs114/3-1.png)
+
+## 1. The 4 Layer Internet Model
 
 - link layer
 
@@ -62,3 +62,72 @@ IP provides a deliberately simple service:
 - unreliable
 - connectionless
 
+
+
+
+### 2. A Day in the Life of a Packet
+
+![1571537265587](/images/cs114/5-1.png)
+
+3-way handshake
+
+SYN, SYS/ACK, ACK
+
+
+
+![1571538070371](images/cs114/5-2.png)
+
+Use winshark to see the 3-way handshake.
+
+
+
+### Packet switching
+
+![1571538602987](images/cs114/6-1.png)
+
+**Packet:** A self-contained unit of data that carries information necessary for it to reach its destination.
+
+**Packet switching:** Independently for each arriving packet, pick its outgoing link. If the link is free, send it. Else hold the packet for later.
+
+
+
+##### Reasons for layering
+
+- Modularity
+- Well defined service
+- Reuse
+- Separation of concerns
+- Continuous improvement
+- Peer-to-peer communications
+
+![1571543318950](/images/cs114/8-2.png)
+
+
+
+Example: Virtual Private Network(VPN):
+
+- HTTP (web) application payload in
+- a Tcp transport segment in
+- an IP network packet in
+- a secured TLS presentation message in 
+- a TCP transport segment in 
+- an IP network packet in 
+- an Ethernet link frame
+
+
+
+### Memory, Byte Order, and Packet Format
+
+![1571543893457](/images/cs114/9-1.png)
+
+
+
+Big endian Makes most sense to human reader
+
+
+
+### Finite State Machine
+
+![1571554589558](/images/cs114/9-2.png)
+
+![1571557222501](/images/cs114/9-3.png)
