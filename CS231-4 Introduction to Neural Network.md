@@ -1,4 +1,4 @@
-CS231-4 Introduction to Neural Network
+### CS231-4 Introduction to Neural Network
 
 #### 1. Computational graphs
 
