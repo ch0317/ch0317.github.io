@@ -56,3 +56,18 @@ Internet Control Message Protocol(ICMP)
 
 
 
+![1572484777168](/images/cs114/21-1.png)
+
+### Address Resolution Protocol
+
+- Generates mappings between layer 2 and layer 3 address
+  - Nodes cache mappings cache entries expire
+- Simple request-reply protocol
+  - Who has network address X?
+  - I have network address X
+- Request sent to link layer broadcast address
+- Reply sent to requesting address(not broadcast)
+- Packet format includes redundant data
+  - Request has sufficient information to generate a mapping
+  - Makes debugging much simper
+- No "sharing" of state: bad state will die eventually
