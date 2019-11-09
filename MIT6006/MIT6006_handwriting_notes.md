@@ -8,7 +8,7 @@ typora-root-url: C:\Users\chenhao\Desktop\blog\ch0317.github.io
 
 ### lecture 1
 
-![L1_0](images/MIT6006/L1_0.JPG)
+![L1_0](/images/MIT6006/L1_0.JPG)
 
 ![L1_1](/images/MIT6006/L1_1.JPG)
 
