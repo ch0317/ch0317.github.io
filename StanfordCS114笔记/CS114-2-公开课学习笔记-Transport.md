@@ -1,12 +1,27 @@
----
-typora-root-url: ./
----
 
 
+# CS114-2 公开课学习笔记：Transport
 
-# CS114-2 An Introduction to Computer Networks
+outline:
 
-![1572318699919](images/cs114/15-1.png)
+1. Three Transport Layers: TCP, UDP, ICMP
+2. How TCP works: Connections and Retransmissions
+3. How UDP works
+4. How ICMP works
+5. The End to End Principle
+
+goal:
+
+-  have a good understanding of the three different Transport Layers
+- understand different retransmission strategies and why TCP uses a "Sliding Window"
+- know why TCP uses connections, how they are established and the state machine that maintain them.
+- be able to explain the End to End Principle
+
+## TCP service model
+
+![1573388032312](../images/cs114/15-0.png)
+
+![1572318699919](../images/cs114/15-1.png)
 
 - The TCP layer at Host A can close the connection by sending a FIN message
 - Host B acknowledges that no longer has data to send and stops looking for new data from A. This closes the data stream from A to B. But B might still have new data to send to A and is not ready to close down the channel from B to A. So the message from B to A carrying the ACK message can also carry new data.
@@ -28,11 +43,11 @@ typora-root-url: ./
 
 
 
-![1572328242058](/images/cs114/15-2.png)
+![1572328242058](../images/cs114/15-2.png)
 
 ### The UDP Sevice Model
 
-![1572328866024](/images/cs114/15-3.png)
+![1572328866024](../images/cs114/15-3.png)
 
 - Connectionless: No connection established
 - Datagram Service: Packets may show up in any order.
@@ -50,24 +65,14 @@ Internet Control Message Protocol(ICMP)
 - Reports error conditions
 - Helps us diagnose problems
 
-![1572332029758](/images/cs114/15-4.png)
+![1572332029758](../images/cs114/15-4.png)
 
-![1572332722474](/images/cs114/15-5.png)
+![1572332722474](../images/cs114/15-5.png)
 
 
 
-![1572484777168](/images/cs114/21-1.png)
+![1572484777168](../images/cs114/21-1.png)
 
-### Address Resolution Protocol
+## Finite State Machine
 
-- Generates mappings between layer 2 and layer 3 address
-  - Nodes cache mappings cache entries expire
-- Simple request-reply protocol
-  - Who has network address X?
-  - I have network address X
-- Request sent to link layer broadcast address
-- Reply sent to requesting address(not broadcast)
-- Packet format includes redundant data
-  - Request has sufficient information to generate a mapping
-  - Makes debugging much simper
-- No "sharing" of state: bad state will die eventually
+![1571554589558](../images/cs114/9-2.png)
