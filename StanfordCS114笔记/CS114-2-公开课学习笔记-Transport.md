@@ -42,8 +42,9 @@ goal:
 - Congestion Control: Control network congestion.
 
 
-
 ![1572328242058](../images/cs114/15-2.png)
+
+![1573395381044](../images/cs114/15-6.png)
 
 ### The UDP Sevice Model
 
